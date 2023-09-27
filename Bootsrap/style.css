@@ -319,6 +319,11 @@ footer {
     min-height: 500px;
 }
 
+.footer-logo-container {
+    background-color: #fff;
+    padding: 0.25rem;
+}
+
 .footer-logo {
     height: 80px;
     width: 80px;
