@@ -19,7 +19,7 @@
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Barra de navegacion -->
@@ -34,16 +34,16 @@
           </a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Sobre Mi</a>
+              <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre Mi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Proyectos</a>
+              <a class="nav-link" href="#proyectos">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Testimonios</a>
+              <a class="nav-link" href="#testimonios">Testimonios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- sobre mi -->
-    <section class="sobre-mi seccion-oscura">
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
       <div class="contenedor">
         <h2 class="seccion-titulo">Conoce a Emmanuel Camacho</h2>
         <p class="seccion-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium orci non elementum posuere. Curabitur ullamcorper tristique nunc. Vivamus luctus iaculis ultricies. Pellentesque mattis eros in metus viverra tincidunt. Nam bibendum metus et dui bibendum mollis. Maecenas nulla velit, feugiat et faucibus ut, aliquet eget sapien. Mauris in sem sed neque molestie pellentesque. Donec consequat ultricies libero sit amet viverra. Morbi porta vestibulum massa sed tincidunt. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -113,7 +113,7 @@
     </section>
 
     <!-- Proyectos  -->
-    <section class="proyectos-recientes seccion-clara d-flex flex-column">
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
       <h2 class="seccion-titulo texto-negro">Mis proyectos recientes</h2>
       <h3 class="seccion-descripcion">Estos son algunos de mis proyectos creados recientemente.</h3>
       <!-- Galeria de Proyectos -->
@@ -263,7 +263,7 @@
     </section>
 
     <!-- Testimonios -->
-    <section class="testimonios seccion-clara">
+    <section id="testimonios" class="testimonios seccion-clara">
       <h2 class="seccion-titulo">Testimonios</h2>
       <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes...</h3>
     
@@ -272,19 +272,33 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="container">
-                <img class="testimonio-imagen rounded-circle" src="images/cliente1.jpg" alt="Foto de Raul">
-                <p class="testimonio-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis repellat hic aliquam exercitationem amet eaque aut distinctio eius ut iusto ipsum nam omnis consequuntur illo, maxime placeat atque vitae expedita.</p>
+                <img class="testimonio-imagen rounded-circle" src="images/cliente1.jpg" alt="Foto de Laura">
+                <p class="testimonio-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis repellat hic aliquam exercitationem amet eaque.</p>
                 <div class="testimonio-info">
-                  <p class="cliente">Raul</p>
+                  <p class="cliente">Laura</p>
                   <p class="cargo">Gerente de proyectos en Desarrollo Web</p>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images/proyecto2.jpg" class="d-block w-100" alt="...">
+              <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="images/cliente2.jpg" alt="Foto de Luis">
+                <p class="testimonio-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis repellat hic aliquam exercitationem amet eaque.</p>
+                <div class="testimonio-info">
+                  <p class="cliente">Luis</p>
+                  <p class="cargo">Gerente de DiseñaMiPaginaWeb</p>
+                </div>
+              </div>
             </div>
             <div class="carousel-item">
-              <img src="images/proyecto3.jpg" class="d-block w-100" alt="...">
+              <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="images/cliente3.jpg" alt="Foto de Jimena">
+                <p class="testimonio-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis repellat hic aliquam exercitationem amet eaque.</p>
+                <div class="testimonio-info">
+                  <p class="cliente">Jimena</p>
+                  <p class="cargo">Directora de AprendeAProgramar</p>
+                </div>
+              </div>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
@@ -296,7 +310,55 @@
             <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
+    </section>\
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto seccion-oscura">
+      <div class="container">
+        <div class="container text-center rectangulo d-flex justify-content-evenly">
+          <div class="row">
+            <div class="col-12 col-md-4 seccion-titulo">
+              ¡Hablemos!
+            </div>
+            <div class="col-12 col-md-4 descripcion">
+              Contactame para iniciar tu proyecto de desarrollo web y hare que tu vision se haga realidad.
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="mailto:EmmanuelC@micorreo.com">
+                <button type="button">
+                  Contacto
+                  <i class="bi bi-envelope-check-fill"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Pie de pagina (footer) -->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+      <img class="footer-logo" src="images/icono.jpg" width="50" alt="Logo del portafolio">
+      <p class="footer-texto text-center">Aprendo y creo todos los dias.<br>Creemos un proyecto Juntos.</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://mx.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:Emmanuelc@micorreo.com" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+      <div clas="derechos-de-autor">Creado por Emmanuel Camacho(2023) &#169;</div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
