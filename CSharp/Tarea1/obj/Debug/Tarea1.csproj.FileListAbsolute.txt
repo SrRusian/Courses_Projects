@@ -1,0 +1,7 @@
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\bin\Debug\Tarea1.exe.config
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\bin\Debug\Tarea1.exe
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\bin\Debug\Tarea1.pdb
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\obj\Debug\Tarea1.csproj.AssemblyReference.cache
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\obj\Debug\Tarea1.csproj.CoreCompileInputs.cache
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\obj\Debug\Tarea1.exe
+C:\Users\srrem\Dropbox\Tareas\Courses\CSharp\Tarea1\obj\Debug\Tarea1.pdb
