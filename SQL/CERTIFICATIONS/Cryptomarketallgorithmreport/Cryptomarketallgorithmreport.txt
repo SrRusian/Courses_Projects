@@ -1,0 +1,80 @@
+//PROBLEM
+Crypto Market Algorithms Report
+
+A number of algorithms are used to mine cryptocurrencies. As part of a comparison, create a query to return a list of algorithms and their volumes for each quarter of the year 2020.
+
+The result should be in the following format: algorithm name, Q1, Q2, Q3, Q4 transactions.
+
+Q1 through Q4 contain the sums of transaction volumes for the algorithm for each calendar quarter of 2020 precise to 6 places after the decimal.
+
+Results should be sorted ascending by algorithm name.
+
+
+
+
+
+//SOLUTION
+SELECT
+c.algorithm,
+SUM(CASE WHEN QUARTER(t.dt) = 1 THEN t.volume ELSE 0 END) AS trannsactions_Q1,
+SUM(CASE WHEN QUARTER(t.dt) = 2 THEN t.volume ELSE 0 END) AS trannsactions_Q2,
+SUM(CASE WHEN QUARTER(t.dt) = 3 THEN t.volume ELSE 0 END) AS trannsactions_Q3,
+SUM(CASE WHEN QUARTER(t.dt) = 4 THEN t.volume ELSE 0 END) AS trannsactions_Q4
+FROM
+coins c
+JOIN
+transactions t
+ON
+c.code = t.coin_code
+WHERE
+EXTRACT(YEAR FROM t.dt) = 2020
+GROUP BY
+c.algorithm
+ORDER BY
+c.algorithm;
+
+
+//DATABASE
+-- Crear tablas
+CREATE TABLE coins (
+  code VARCHAR(4) PRIMARY KEY,
+  name VARCHAR(64),
+  algorithm VARCHAR(128)
+);
+
+CREATE TABLE transactions (
+  coin_code VARCHAR(4),
+  dt DATETIME, //VARCHAR(19)
+  volume DECIMAL(11,6),
+  FOREIGN KEY (coin_code) REFERENCES coins(code)
+);
+
+-- Insertar datos de ejemplo
+INSERT INTO coins (code, name, algorithm) VALUES
+('BTC', 'Bitcoin', 'SHA-256'),
+('DOGE', 'Dogecoin', 'Scrypt'),
+('ETH', 'Etherium', 'Ethash'),
+('LTC', 'Litecoin', 'Scrypt'),
+('XMR', 'Monero', 'RandomX');
+
+INSERT INTO transactions (coin_code, dt, volume) VALUES
+('LTC', '2021-04-05 04:30:30', 422.830473),
+('DOGE', '2020-01-22 07:44:35', 55.225905),
+('BTC', '2019-10-19 06:32:46', 6906.520151),
+('DOGE', '2020-01-29 12:21:19', 9370.519560),
+('BTC', '2020-04-05 12:38:54', 4775.700964),
+('DOGE', '2019-12-16 13:41:53', 8865.966189),
+('BTC', '2019-12-07 02:24:27', 9086.928039),
+('ETH', '2020-04-21 21:27:43', 7273.565939),
+('DOGE', '2020-08-25 19:09:10', 8027.924009),
+('ETH', '2020-06-04 03:53:39', 6736.423699),
+('DOGE', '2019-12-23 00:13:13', 6704.032765),
+('LTC', '2021-04-01 23:13:14', 3117.003666),
+('XMR', '2020-10-10 17:50:52', 1989.514313),
+('BTC', '2020-10-09 13:56:39', 9776.150048),
+('DOGE', '2021-03-11 18:57:57', 4346.517803),
+('BTC', '2019-12-10 11:28:37', 3287.686066),
+('DOGE', '2019-11-28 01:05:59', 7108.628739),
+('BTC', '2020-07-16 18:26:49', 971.325293),
+('BTC', '2020-04-22 03:32:11', 2389.737999),
+('LTC', '2020-08-22 22:13:59', 1079.398703);
