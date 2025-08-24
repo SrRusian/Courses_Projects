@@ -1,0 +1,2 @@
+SELECT DISTINCT stream
+FROM shows;
